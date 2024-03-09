@@ -21,6 +21,3 @@
     ~/.config/nvim/coc-settings.json: editors/nvim/coc-settings.json
     ~/.config/nvim/init.vim: editors/nvim/init.vim
     ~/.ssh/config: os/mac/ssh/config
-    ~/Library/Application Support/Code/User/extensions.json: editors/code/extensions.json
-    ~/Library/Application Support/Code/User/keybindings.json: editors/code/keybindings.json
-    ~/Library/Application Support/Code/User/settings.json: editors/code/settings.json
