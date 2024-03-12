@@ -28,3 +28,15 @@ alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
 alias o.='open .'
 alias up='dot package update_all'
+
+# occiCarro
+alias gofront='cd ~/Desktop/BOCC/vehiculos/front/bocc-occiauto-frontend-vehicles/'
+alias goqa='cd ~/Desktop/BOCC/occiauto/qa/'
+alias golambdas='cd ~/Desktop/BOCC/occiauto/lambdas/'
+alias goutilities='cd ~/Desktop/BOCC/occiauto/utilities/'
+
+alias initfront='cd ~/Desktop/BOCC/vehiculos/front/bocc-occiauto-frontend-vehicles/; npm start'
+# alias aws_token="sed -i '' 's/aws_session_token = .*/aws_session_token = $1/' ~/.aws/config"
+alias aws_token="sed -i 's/^aws_session_token = .*/aws_session_token = $1/' ~/.aws/config"
+alias assign_var="sed -i 's/^var=.*/var=\"$1\"/' ~/archivo.txt"
+
