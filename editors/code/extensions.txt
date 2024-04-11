@@ -1,0 +1,17 @@
+amazonwebservices.aws-toolkit-vscode
+bito.bito
+blakeh.jump-to-test
+codeium.codeium
+dbaeumer.vscode-eslint
+eamodio.gitlens
+esbenp.prettier-vscode
+firsttris.vscode-jest-runner
+grapecity.gc-excelviewer
+mechatroner.rainbow-csv
+mhutchie.git-graph
+miguelsolorio.fluent-icons
+miguelsolorio.symbols
+mintlify.document
+oderwat.indent-rainbow
+simonsiefke.svg-preview
+usernamehw.errorlens
