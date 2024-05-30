@@ -56,7 +56,8 @@
   "workbench.colorCustomizations": {},
   "editor.inlineSuggest.showToolbar": "onHover",
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.iconTheme": "symbols"
+  "workbench.iconTheme": "symbols",
+  "bitoAI.appearance.fontSize (Match with IDE Font)": false
   // "git.openRepositoryInParentFolders": "always"
   //AUTOMATIC
 }
