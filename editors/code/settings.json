@@ -30,10 +30,16 @@
   "workbench.sideBar.location": "left",
   "workbench.tree.indent": 20,
   "workbench.list.smoothScrolling": true,
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.iconTheme": "symbols",
+  "workbench.colorCustomizations": {},
   "editor.bracketPairColorization.enabled": true,
   "symbols.hidesExplorerArrows": false,
   "breadcrumbs.symbolPath": "off",
   "editor.dragAndDrop": false,
+  "editor.inlineSuggest.showToolbar": "onHover",
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "workbench.colorTheme": "Plastic",
   //AWS
   "aws.telemetry": false,
   "aws.lambda.recentlyUploaded": {
@@ -50,13 +56,11 @@
       "source.fixAll.eslint"
     ]
   },
+  // Extensions
   "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
   "bitoAI.codeCompletion.enableAutoCompletion": true,
   "bitoAI.codeCompletion.enableCommentToCode": true,
-  "workbench.colorCustomizations": {},
-  "editor.inlineSuggest.showToolbar": "onHover",
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.iconTheme": "symbols",
+
   "bitoAI.appearance.fontSize (Match with IDE Font)": false
   // "git.openRepositoryInParentFolders": "always"
   //AUTOMATIC
