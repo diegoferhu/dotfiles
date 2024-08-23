@@ -1,0 +1,70 @@
+tap "denisidoro/tools"
+tap "hashicorp/tap"
+tap "homebrew/bundle"
+brew "node"
+brew "angular-cli"
+brew "bash"
+brew "bat"
+brew "coreutils"
+brew "findutils"
+brew "fnm"
+brew "fzf"
+brew "git-crypt"
+brew "python@3.12"
+brew "git-filter-repo"
+brew "gitui"
+brew "gnu-sed"
+brew "harfbuzz"
+brew "little-cms2"
+brew "openjdk"
+brew "gradle"
+brew "hyperfine"
+brew "luv"
+brew "make"
+brew "mas"
+brew "maven"
+brew "neovim"
+brew "openssl@1.1"
+brew "pyenv"
+brew "redis"
+brew "ripgrep"
+brew "wget"
+brew "zsh"
+brew "denisidoro/tools/docpars"
+brew "hashicorp/tap/terraform"
+cask "bitwarden"
+cask "buttercup"
+cask "visual-studio-code"
+mas "Anydo", id: 944960179
+mas "Encrypto", id: 935235287
+mas "GarageBand", id: 682658836
+mas "Horzono", id: 6447323845
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Vetero", id: 6449091332
+mas "Xcode", id: 497799835
+vscode "amazonwebservices.aws-toolkit-vscode"
+vscode "bito.bito"
+vscode "blakeh.jump-to-test"
+vscode "codeium.codeium"
+vscode "dbaeumer.vscode-eslint"
+vscode "eamodio.gitlens"
+vscode "esbenp.prettier-vscode"
+vscode "firsttris.vscode-jest-runner"
+vscode "grapecity.gc-excelviewer"
+vscode "mechatroner.rainbow-csv"
+vscode "mhutchie.git-graph"
+vscode "miguelsolorio.fluent-icons"
+vscode "miguelsolorio.symbols"
+vscode "mintlify.document"
+vscode "oderwat.indent-rainbow"
+vscode "simonsiefke.svg-preview"
+vscode "sourcegraph.cody-ai"
+vscode "usernamehw.errorlens"
+vscode "will-stone.plastic"
