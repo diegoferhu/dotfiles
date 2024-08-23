@@ -60,7 +60,6 @@
   "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
   "bitoAI.codeCompletion.enableAutoCompletion": true,
   "bitoAI.codeCompletion.enableCommentToCode": true,
-
   "bitoAI.appearance.fontSize (Match with IDE Font)": false
   // "git.openRepositoryInParentFolders": "always"
   //AUTOMATIC

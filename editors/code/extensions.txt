@@ -14,4 +14,6 @@ miguelsolorio.symbols
 mintlify.document
 oderwat.indent-rainbow
 simonsiefke.svg-preview
+sourcegraph.cody-ai
 usernamehw.errorlens
+will-stone.plastic
