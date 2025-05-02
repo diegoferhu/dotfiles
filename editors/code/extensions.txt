@@ -7,6 +7,7 @@ eamodio.gitlens
 esbenp.prettier-vscode
 firsttris.vscode-jest-runner
 grapecity.gc-excelviewer
+hediet.vscode-drawio
 mechatroner.rainbow-csv
 mhutchie.git-graph
 miguelsolorio.fluent-icons
