@@ -38,22 +38,9 @@ brew "denisidoro/tools/docpars"
 brew "hashicorp/tap/terraform"
 brew "jesseduffield/lazygit/lazygit"
 cask "bitwarden"
+cask "bruno"
 cask "buttercup"
 cask "visual-studio-code"
-mas "Anydo", id: 944960179
-mas "Encrypto", id: 935235287
-mas "GarageBand", id: 682658836
-mas "Horzono", id: 6447323845
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft Outlook", id: 985367838
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Vetero", id: 6449091332
-mas "Xcode", id: 497799835
 vscode "amazonwebservices.aws-toolkit-vscode"
 vscode "bito.bito"
 vscode "blakeh.jump-to-test"
