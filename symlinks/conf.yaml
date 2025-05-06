@@ -1,4 +1,4 @@
-- clean: ['~']
+- clean: ["~"]
 
 - defaults:
     link:
@@ -17,8 +17,6 @@
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/.inputrc: shell/.inputrc
-    ~/.vimrc: editors/nvim/.vimrc
-    ~/.config/nvim/coc-settings.json: editors/nvim/coc-settings.json
-    ~/.config/nvim/init.vim: editors/nvim/init.vim
     ~/.ssh/config: os/mac/ssh/config
     ~/.p10k.zsh: shell/zsh/themes/.p10k.zsh
+    ~/.config/nvim: editors/nvim
