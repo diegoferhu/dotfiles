@@ -160,10 +160,9 @@ return {
           prepare_output = require("CopilotChat.config.providers").copilot.prepare_output,
 
           get_headers = function()
-            -- local api_key = assert(os.getenv("OPENROUTER_API_KEY"), "OPENROUTER_API_KEY env not set")
+            local api_key = assert(os.getenv("AVANTE_OPENROUTER_API_KEY"), "AVANTE_OPENROUTER_API_KEY env not set")
             return {
-              -- Authorization = "Bearer " .. api_key,
-              Authorization = "Bearer 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",
+              Authorization = "Bearer " .. api_key,
               ["Content-Type"] = "application/json",
             }
           end,
