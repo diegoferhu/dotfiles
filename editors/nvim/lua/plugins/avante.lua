@@ -98,13 +98,16 @@ return {
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
   opts = {
-    provider = "ollama",
+    provider = "gemini ",
     providers = {
-      openrouter = {
-        __inherited_from = "openai",
-        endpoint = "https://openrouter.ai/api/v1",
-        api_key_name = "OPENROUTER_API_KEY",
-        model = "deepseek/deepseek-r1",
+      gemini = {
+        model = "gemini-2.5-flash", -- Specify your desired Gemini model
+        api_key_name = "GEMINI_API_KEY", -- Environment variable or secret manager key for your API key
+        endpoint = "https://generativelanguage.googleapis.com/v1beta/models/", -- Gemini API endpoint
+        timeout = 30000, -- Timeout in milliseconds
+        extra_request_body = {
+          temperature = 0.5, -- Adjust temperature for response creativity
+        },
       },
       ollama = {
         endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
@@ -130,29 +133,6 @@ return {
           }
         end,
       },
-      -- add any opts here
-      -- for example
-      -- provider = "claude",
-      -- providers = {
-      --   claude = {
-      --     endpoint = "https://api.anthropic.com",
-      --     model = "claude-sonnet-4-20250514",
-      --     timeout = 30000, -- Timeout in milliseconds
-      --     extra_request_body = {
-      --       temperature = 0.75,
-      --       max_tokens = 20480,
-      --     },
-      --   },
-      --   moonshot = {
-      --     endpoint = "https://api.moonshot.ai/v1",
-      --     model = "kimi-k2-0711-preview",
-      --     timeout = 30000, -- Timeout in milliseconds
-      --     extra_request_body = {
-      --       temperature = 0.75,
-      --       max_tokens = 32768,
-      --     },
-      --   },
-      -- },
     },
   },
   dependencies = {
