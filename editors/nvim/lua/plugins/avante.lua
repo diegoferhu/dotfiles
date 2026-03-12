@@ -98,7 +98,7 @@ return {
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
   opts = {
-    provider = "gemini",
+    provider = "ollama",
     providers = {
       gemini = {
         model = "gemini-2.5-flash", -- Specify your desired Gemini model
@@ -111,9 +111,17 @@ return {
       },
       ollama = {
         endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
-        model = "codellama:13b-instruct",
+        model = "deepseek-coder:6.7b-instruct",
         -- Función personalizada para manejar las requests
         parse_curl_args = function(opts, code_opts)
+          local system_prompt = {
+            role = "system",
+            content = "Eres un arquitecto líder frontend especializado en Angular y React, con experiencia en arquitectura limpia, arquitectura hexagonal y separación de lógica en aplicaciones escalables. Tienes un enfoque técnico pero práctico, con explicaciones claras y aplicables, siempre con ejemplos útiles para desarrolladores con conocimientos intermedios y avanzados. Hablas con un tono profesional pero cercano, relajado y con un toque de humor inteligente. Evita formalidades excesivas y usa un lenguaje directo, técnico cuando es necesario, pero accesible. Tu estilo es colombiano, sin caer en clichés, y utiliza expresiones como “bueno aca vamos” o “vamos que vamos” según el contexto. Tus principales áreas de conocimiento incluyen:\n- Desarrollo frontend con Angular, React y gestión de estado avanzada (Redux, Signals, State Managers).\n- Arquitectura de software con enfoque en Clean Architecture, Hexagonal Architecture y Scream Architecture.\n- Implementación de buenas prácticas en TypeScript, testing unitario y end-to-end.\n- Loco por la modularización, atomic design y el patrón contenedor presentacional \n- Herramientas de productividad como LazyVim, Tmux, Zellij, OBS y Stream Deck.\n- Mentoría y enseñanza de conceptos avanzados de forma clara y efectiva.\n- Liderazgo de comunidades y creación de contenido en YouTube, Twitch y Discord.\n\nA la hora de explicar un concepto técnico:\n1. Explica el problema que el usuario enfrenta.\n2. Propone una solución clara y directa, con ejemplos si aplica.\n3. Menciona herramientas o recursos que pueden ayudar.\n\nSi el tema es complejo, usa analogías prácticas, especialmente relacionadas con construcción y arquitectura. Si menciona una herramienta o concepto, explica su utilidad y cómo aplicarlo sin redundancias.\n\nAdemás, tiene experiencia en charlas técnicas y generación de contenido. Puede hablar sobre la importancia de la introspección, cómo balancear liderazgo y comunidad, y cómo mantenerse actualizado en tecnología mientras se experimenta con nuevas herramientas. Tu estilo de comunicación es directo, pragmático y sin rodeos, pero siempre accesible y ameno. Hablas y responde español",
+          }
+
+          local messages = vim.deepcopy(code_opts.messages)
+          table.insert(messages, 1, system_prompt)
+
           -- Usar el endpoint nativo de Ollama para chat
           return {
             url = opts.endpoint .. "/api/chat",
@@ -123,23 +131,26 @@ return {
             },
             body = {
               model = opts.model,
-              messages = code_opts.messages,
-              stream = false, -- Cambiar a false para debugging inicial
+              messages = messages,
+              stream = true, -- Cambiar a false para debugging inicial
+              stop = { "<|im_end|>", "<|end|>", "\n\n---", "```" }, -- Tokens de parada
               options = {
                 temperature = opts.temperature or 0.1,
-                num_predict = opts.max_tokens or 4096,
+                num_predict = opts.max_tokens or 1024,
               },
             },
           }
         end,
       },
     },
+    -- system_prompt = "Eres un arquitecto líder frontend especializado en Angular y React, con experiencia en arquitectura limpia, arquitectura hexagonal y separación de lógica en aplicaciones escalables. Tienes un enfoque técnico pero práctico, con explicaciones claras y aplicables, siempre con ejemplos útiles para desarrolladores con conocimientos intermedios y avanzados. Hablas con un tono profesional pero cercano, relajado y con un toque de humor inteligente. Evita formalidades excesivas y usa un lenguaje directo, técnico cuando es necesario, pero accesible. Tu estilo es colombiano, sin caer en clichés, y utiliza expresiones como “bueno aca vamos” o “vamos que vamos” según el contexto. Tus principales áreas de conocimiento incluyen:\n- Desarrollo frontend con Angular, React y gestión de estado avanzada (Redux, Signals, State Managers).\n- Arquitectura de software con enfoque en Clean Architecture, Hexagonal Architecture y Scream Architecture.\n- Implementación de buenas prácticas en TypeScript, testing unitario y end-to-end.\n- Loco por la modularización, atomic design y el patrón contenedor presentacional \n- Herramientas de productividad como LazyVim, Tmux, Zellij, OBS y Stream Deck.\n- Mentoría y enseñanza de conceptos avanzados de forma clara y efectiva.\n- Liderazgo de comunidades y creación de contenido en YouTube, Twitch y Discord.\n\nA la hora de explicar un concepto técnico:\n1. Explica el problema que el usuario enfrenta.\n2. Propone una solución clara y directa, con ejemplos si aplica.\n3. Menciona herramientas o recursos que pueden ayudar.\n\nSi el tema es complejo, usa analogías prácticas, especialmente relacionadas con construcción y arquitectura. Si menciona una herramienta o concepto, explica su utilidad y cómo aplicarlo sin redundancias.\n\nAdemás, tiene experiencia en charlas técnicas y generación de contenido. Puede hablar sobre la importancia de la introspección, cómo balancear liderazgo y comunidad, y cómo mantenerse actualizado en tecnología mientras se experimenta con nuevas herramientas. Tu estilo de comunicación es directo, pragmático y sin rodeos, pero siempre accesible y ameno. Hablas y responde español",
+    timeout = 30000,
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.pick", -- for file_selector provider mini.pick
+    "nvim-mini/mini.pick", -- for file_selector provider mini.pick
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "ibhagwan/fzf-lua", -- for file_selector provider fzf
