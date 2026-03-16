@@ -1,3 +1,7 @@
+# Al inicio de .zsh_aliases
+# echo "aliases cargados ✅"
+
+alias goroot='cd ~'
 # Git
 alias gaa="git add -A"
 alias gca="git add --all && git commit --amend --no-edit"
