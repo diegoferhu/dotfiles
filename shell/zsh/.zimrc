@@ -3,6 +3,9 @@ zmodule zimfw/environment
 zmodule zimfw/git-info
 zmodule zimfw/input
 zmodule zimfw/completion
+zmodule zimfw/utility
+zmodule zimfw/exa
+zmodule kiesman99/zim-zoxide
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
 zmodule romkatv/powerlevel10k --use degit
