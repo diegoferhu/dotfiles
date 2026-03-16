@@ -1,12 +1,3 @@
-# Enable aliases to be sudo’ed
-alias sudo='sudo '
-
-alias ..="cd .."
-alias ...="cd ../.."
-alias ll="ls -l"
-alias la="ls -la"
-alias ~="cd ~"
-
 # Git
 alias gaa="git add -A"
 alias gca="git add --all && git commit --amend --no-edit"
