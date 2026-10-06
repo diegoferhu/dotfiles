@@ -3,6 +3,7 @@
     ~/.zlogin: shell/zsh/.zlogin
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
+    ~/.zprofile: shell/zsh/.zprofile
     ~/.ssh/config: os/mac/ssh/config
     ~/.p10k.zsh: shell/zsh/themes/.p10k.zsh
     ~/.config/nvim: editors/nvim
