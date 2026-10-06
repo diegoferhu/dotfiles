@@ -6,3 +6,4 @@
     ~/.ssh/config: os/mac/ssh/config
     ~/.p10k.zsh: shell/zsh/themes/.p10k.zsh
     ~/.config/nvim: editors/nvim
+    ~/.wezterm.lua: terminal/wezterm/.wezterm.lua
